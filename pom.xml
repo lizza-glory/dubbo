@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lizza</groupId>
+    <artifactId>dubbo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>dubbo-provider-spring</module>
+        <module>mall-common-api</module>
+        <module>mall-order-service</module>
+        <module>mall-user-service</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <properties>
+        <lombok.version>1.18.10</lombok.version>
+        <dubbo-api.version>1.0-SNAPSHOT</dubbo-api.version>
+        <mall-common-api.version>1.0-SNAPSHOT</mall-common-api.version>
+        <dubbo.version>2.6.2</dubbo.version>
+        <curator.version>2.12.0</curator.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.lizza</groupId>
+                <artifactId>dubbo-api</artifactId>
+                <version>${dubbo-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lizza</groupId>
+                <artifactId>mall-common-api</artifactId>
+                <version>${mall-common-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-framework</artifactId>
+                <version>${curator.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <repositories>
+        <repository>
+            <id>aliyun</id>
+            <name>aliyun</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+        </repository>
+    </repositories>
+</project>

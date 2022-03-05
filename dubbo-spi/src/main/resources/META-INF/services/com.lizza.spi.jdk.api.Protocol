@@ -1,0 +1,2 @@
+com.lizza.spi.jdk.service.DubboProtocol
+com.lizza.spi.jdk.service.HttpProtocol

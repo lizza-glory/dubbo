@@ -8,19 +8,14 @@
     <artifactId>dubbo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>dubbo-provider-spring</module>
-        <module>mall-common-api</module>
-        <module>mall-order-service</module>
-        <module>mall-user-service</module>
+        <module>dubbo-spi</module>
     </modules>
+
     <packaging>pom</packaging>
 
     <properties>
-        <lombok.version>1.18.10</lombok.version>
-        <dubbo-api.version>1.0-SNAPSHOT</dubbo-api.version>
-        <mall-common-api.version>1.0-SNAPSHOT</mall-common-api.version>
-        <dubbo.version>2.6.2</dubbo.version>
-        <curator.version>2.12.0</curator.version>
+        <lombok.version></lombok.version>
+        <dubbo-api.version></dubbo-api.version>
     </properties>
 
     <dependencyManagement>
@@ -28,27 +23,12 @@
             <dependency>
                 <groupId>com.lizza</groupId>
                 <artifactId>dubbo-api</artifactId>
-                <version>${dubbo-api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.lizza</groupId>
-                <artifactId>mall-common-api</artifactId>
-                <version>${mall-common-api.version}</version>
+                <version>1.0-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>${lombok.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>dubbo</artifactId>
-                <version>${dubbo.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.curator</groupId>
-                <artifactId>curator-framework</artifactId>
-                <version>${curator.version}</version>
+                <version>1.18.10</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

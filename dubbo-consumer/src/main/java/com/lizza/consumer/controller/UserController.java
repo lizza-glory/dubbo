@@ -1,11 +1,12 @@
 package com.lizza.consumer.controller;
 
-import com.alibaba.dubbo.config.annotation.Reference;
 import com.lizza.api.UserService;
 import com.lizza.entity.Address;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import java.util.List;
 
 /**
@@ -17,7 +18,7 @@ import java.util.List;
 @RequestMapping
 public class UserController {
 
-    @Reference(timeout = 700)
+    @DubboReference(timeout = 1700)
     private UserService userService;
 
     @GetMapping("/getAddressByUserId")

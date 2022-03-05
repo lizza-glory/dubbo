@@ -1,15 +1,15 @@
 package com.lizza.provider.service;
 
-import com.alibaba.dubbo.config.annotation.Service;
 import com.lizza.api.UserService;
 import com.lizza.entity.Address;
+import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Component
-@Service(interfaceClass = UserService.class, timeout = 500)
+@DubboService(interfaceClass = UserService.class, timeout = 500)
 public class UserServiceImpl implements UserService {
 
     @Override

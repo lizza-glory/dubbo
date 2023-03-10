@@ -5,8 +5,8 @@ dubbo:
   application:
     name: provider
   registry:
-    address: zookeeper://192.168.151.141:2181
-    timeout: 5000
+    address: zookeeper://zookeeper:2181
+    timeout: 2000
   protocol:
     name: dubbo
     port: 20880
@@ -14,4 +14,4 @@ dubbo:
     check: false
     loadbalance: roundrobin
   config-center:
-    timeout: 5000
+    timeout: 2000
